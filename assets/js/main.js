@@ -2,6 +2,26 @@ console.log("This worked");
 
 $(document).ready(console.log("Linked jQuery!"));
 
+$(".btn").on("click", function(event){
+    event.preventDefault();
+
+    var name= $("#exampleName").val();
+    var destination= $("#exampleDestination").val();
+    var initialTime= $("#exampleTime").val();
+    var frequency= $("#exampleFrequency").val();
+    console.log(name);
+    console.log(destination);
+    console.log(initialTime);
+    console.log(frequency);
+
+    // database.ref().set({
+    //     name:name,
+    //     role:role,
+    //     date:date,
+    //     rate:rate
+    // });
+});
+
 // Assume the following situations.
 
     // (TEST 1)
