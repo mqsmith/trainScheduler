@@ -1,6 +1,8 @@
-#storage{
-    background-color: lightgray;
+.jumbotron {
+    text-align: center;
+    align-content: center;
 }
+
 .card-header{
     font-weight: bold;
 }
@@ -9,10 +11,7 @@ label {
     font-weight: bold;
 }
 
-.jumbotron {
+#schedule-here{
+    margin-bottom: 20px;
 
-    background-color: black;
-    color: white;
-    text-align: center;
-    align-content: center;
 }
