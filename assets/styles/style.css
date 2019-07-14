@@ -1,4 +1,10 @@
+html, body{
+    background-image: url(../images/train.jpg);
+}
+
 .jumbotron {
+    background-color: rgb(142, 10, 10);
+    /* color: white; */
     text-align: center;
     align-content: center;
 }
