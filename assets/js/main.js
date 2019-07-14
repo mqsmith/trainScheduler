@@ -1,14 +1,18 @@
 console.log("This worked");
 
 $(document).ready(console.log("Linked jQuery!"));
+var name;
+var destination;
+var initialTime;
+var frequency;
 
 $(".btn").on("click", function(event){
     event.preventDefault();
 
-    var name= $("#exampleName").val();
-    var destination= $("#exampleDestination").val();
-    var initialTime= $("#exampleTime").val();
-    var frequency= $("#exampleFrequency").val();
+    name= $("#exampleName").val();
+    destination= $("#exampleDestination").val();
+    initialTime= $("#exampleTime").val();
+    frequency= $("#exampleFrequency").val();
     console.log(name);
     console.log(destination);
     console.log(initialTime);
@@ -20,7 +24,18 @@ $(".btn").on("click", function(event){
     //     date:date,
     //     rate:rate
     // });
+    makeDiv();
 });
+
+
+function makeDiv(){
+    $(".trains").append("<tr class='well'><th class='trainName'> " +
+        name +
+        " </th><td class='destination'> " + destination +
+        " </td><td class='frequency'> " + frequency +
+        " </td><td class='initialTime'> " + initialTime +
+        " </td></tr>");
+    };
 
 // Assume the following situations.
 
