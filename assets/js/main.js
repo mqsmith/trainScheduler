@@ -6,6 +6,20 @@ var destination;
 var initialTime;
 var frequency;
 
+var firebaseConfig = {
+    apiKey: "AIzaSyD7MNHs02XbXXGvFYxMIH0vy9WsDT46dL4",
+    authDomain: "trainscheduler-f3908.firebaseapp.com",
+    databaseURL: "https://trainscheduler-f3908.firebaseio.com",
+    projectId: "trainscheduler-f3908",
+    storageBucket: "",
+    messagingSenderId: "413725293180",
+    appId: "1:413725293180:web:8169c4d9ee7ab6ef"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var database = firebase.database();
+
 $(".btn").on("click", function(event){
     event.preventDefault();
 
@@ -18,13 +32,17 @@ $(".btn").on("click", function(event){
     console.log(initialTime);
     console.log(frequency);
 
-    // database.ref().set({
-    //     name:name,
-    //     role:role,
-    //     date:date,
-    //     rate:rate
-    // });
+    database.ref().push({
+        name:name,
+        destination:destination,
+        initialTime:initialTime,
+        frequency:frequency
+    });
     makeDiv();
+    $("#exampleName").val("");
+    $("#exampleDestination").val("");
+    $("#exampleTime").val("");
+    $("#exampleFrequency").val("");
 });
 
 
